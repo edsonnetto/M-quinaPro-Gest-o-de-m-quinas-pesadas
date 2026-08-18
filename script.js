@@ -41,7 +41,7 @@ window.addEventListener("storage",renderFrota);
 // somente números, incluindo o código do país e DDD.
 // Exemplo Brasil: 5511999999999
 const WHATSAPP_NUMERO = "5571984120177";
-const WHATSAPP_MENSAGEM = "Olá! Entrei em contato pelo site da MáquinaPro e gostaria de mais informações sobre os equipamentos e serviços.";
+const WHATSAPP_MENSAGEM = "Olá! Gostaria de obter informações sobre a MáquinaPro.";
 const whatsappLink = document.getElementById("whatsappLink");
 if (whatsappLink) {
   whatsappLink.href = "https://wa.me/" + WHATSAPP_NUMERO + "?text=" + encodeURIComponent(WHATSAPP_MENSAGEM);
