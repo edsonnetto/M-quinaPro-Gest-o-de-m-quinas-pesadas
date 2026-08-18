@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Painel administrativo | MáquinaPro</title><link rel="stylesheet" href="admin.css"></head>
+<body>
+<header class="admin-top">
+ <div class="brand"><span class="brand-mark">MP</span><div><strong>MáquinaPro</strong><small>Painel administrativo</small></div></div>
+ <div><a href="../index.html" class="top-link">Site principal</a><button class="logout" onclick="logout()">Sair</button></div>
+</header>
+<main>
+<section class="admin-hero"><div><span class="eyebrow">ADMINISTRAÇÃO</span><h1>Controle da frota</h1><p>Atualize registros, categorias, quantidades e status.</p></div></section>
+<section class="stats">
+ <div class="stat"><span>Registros</span><strong id="totalRegistros">0</strong></div>
+ <div class="stat"><span>Máquinas</span><strong id="totalMaquinas">0</strong></div>
+ <div class="stat"><span>Disponíveis</span><strong id="disponiveis">0</strong></div>
+ <div class="stat"><span>Manutenção</span><strong id="manutencao">0</strong></div>
+</section>
+<section class="panel">
+ <div class="panel-head"><div><h2>Gerenciar frota</h2><p>Somente o administrador possui estas ações.</p></div>
+ <div class="toolbar"><input id="busca" class="search" placeholder="Buscar..." oninput="renderFrota()"><button class="primary" onclick="abrirCadastro()">+ Novo registro</button></div></div>
+ <div class="table-wrap"><table><thead><tr><th>Registro</th><th>Categoria</th><th>Quantidade</th><th>Status</th><th>Atualizado</th><th>Ações</th></tr></thead><tbody id="tabelaFrota"></tbody></table></div>
+</section>
+<section class="panel" id="comunicacaoAdmin">
+ <div class="panel-head">
+  <div><h2>Área de comunicação</h2><p>Publique avisos para aparecerem no site principal.</p></div>
+ </div>
+ <form id="comunicacaoForm" class="communication-form">
+  <label>Tipo
+   <select id="cTipo"><option>Comunicado</option><option>Aviso</option><option>Manutenção</option><option>Informação</option></select>
+  </label>
+  <label>Título<input id="cTitulo" maxlength="100" required placeholder="Título do comunicado"></label>
+  <label>Mensagem<textarea id="cMensagem" maxlength="1000" rows="5" required placeholder="Digite a mensagem..."></textarea></label>
+  <button class="primary" type="submit">Publicar comunicado</button>
+ </form>
+ <div class="comm-admin-title">Comunicados publicados</div>
+ <div id="comunicadosAdmin"></div>
+</section>
+<section class="panel"><div class="panel-head"><div><h2>Histórico</h2><p>Últimas alterações realizadas.</p></div></div><div id="historico"></div></section>
+</main>
+<div class="modal" id="modal"><div class="modal-card"><button class="close" onclick="fecharModal()">×</button>
+<h2 id="modalTitulo">Novo registro</h2><p>Informe os dados da máquina.</p>
+<form id="frotaForm"><input type="hidden" id="fId">
+<label>Registro<input id="fRegistro" required maxlength="40" placeholder="REG-001"></label>
+<label>Categoria de máquina<input id="fCategoria" required maxlength="80" placeholder="Escavadeira"></label>
+<label>Quantidade<input id="fQuantidade" type="number" min="0" required></label>
+<label>Status<select id="fStatus"><option>Disponível</option><option>Em operação</option><option>Reservado</option><option>Em manutenção</option><option>Inativo</option></select></label>
+<button class="primary full" type="submit">Salvar registro</button></form></div></div>
+<div id="toast" class="toast"></div>
+<script src="admin.js"></script>
+</body></html>

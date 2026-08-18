@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MáquinaPro | Gestão de máquinas pesadas</title>
+
+<!-- Ícone da aba do navegador -->
+<link rel="icon" type="image/png" href="assets/mpicon.png">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+
+  <a class="brand" href="#inicio" aria-label="MáquinaPro - início">
+    <img
+      src="assets/logo-maquinapro.png"
+      alt="MáquinaPro - Gestão de máquinas pesadas"
+    >
+  </a>
+
+  <nav class="main-nav">
+    <a class="active" href="#inicio">Início</a>
+    <a href="#sobre">Sobre Nós</a>
+    <a href="#frota">Frota</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#fale-conosco">Fale Conosco</a>
+  </nav>
+
+  <a class="admin-button" href="admin/login.php">
+    ♙ Área do Administrador
+  </a>
+
+  <button class="menu-toggle" aria-label="Abrir menu">
+    ☰
+  </button>
+
+</header>
+
+
+<main>
+
+<section class="hero-modern" id="inicio">
+
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+
+    <div class="hero-copy">
+
+      <span class="eyebrow">
+        GESTÃO E LOCAÇÃO DE EQUIPAMENTOS
+      </span>
+
+      <h1>
+        Soluções completas em<br>
+        <strong>máquinas pesadas</strong>
+      </h1>
+
+      <p>
+        Locação e gestão inteligente de máquinas para impulsionar seus projetos.
+      </p>
+
+      <div class="hero-actions">
+
+        <a class="btn-primary" href="#frota">
+          Conheça nossa frota <span>→</span>
+        </a>
+
+        <a class="btn-outline" href="#fale-conosco">
+          Fale conosco <span>◔</span>
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="benefits">
+
+  <div class="benefit">
+    <div class="benefit-icon">♢</div>
+    <div>
+      <strong>Equipamentos<br>de qualidade</strong>
+      <small>Frota moderna e revisada</small>
+    </div>
+  </div>
+
+  <div class="benefit">
+    <div class="benefit-icon">✓</div>
+    <div>
+      <strong>Gestão eficiente</strong>
+      <small>Controle e manutenção inteligente</small>
+    </div>
+  </div>
+
+  <div class="benefit">
+    <div class="benefit-icon">◷</div>
+    <div>
+      <strong>Agilidade</strong>
+      <small>Atendimento rápido e personalizado</small>
+    </div>
+  </div>
+
+  <div class="benefit">
+    <div class="benefit-icon">▥</div>
+    <div>
+      <strong>Performance</strong>
+      <small>Máximo desempenho em cada projeto</small>
+    </div>
+  </div>
+
+</section>
+
+
+<section class="about-modern section-block" id="sobre">
+
+  <div class="section-heading">
+    <span>SOBRE A EMPRESA</span>
+    <h2>MáquinaPro</h2>
+  </div>
+
+  <div class="about-grid">
+
+    <div>
+
+      <h3>
+        Gestão de máquinas pesadas com tecnologia e eficiência.
+      </h3>
+
+      <p>
+        Somos dedicados à gestão e operação de máquinas e equipamentos,
+        oferecendo soluções para controle de frota, organização operacional
+        e acompanhamento da disponibilidade dos equipamentos.
+      </p>
+
+      <p>
+        Nosso objetivo é proporcionar mais organização, segurança e eficiência
+        para cada operação.
+      </p>
+
+    </div>
+
+
+    <div class="about-points">
+
+      <div>
+        <b>Missão</b>
+        <span>Gestão organizada e eficiente.</span>
+      </div>
+
+      <div>
+        <b>Visão</b>
+        <span>Tornar processos mais simples e transparentes.</span>
+      </div>
+
+      <div>
+        <b>Valores</b>
+        <span>Segurança, responsabilidade, organização e eficiência.</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="services section-block" id="servicos">
+
+  <div class="section-heading">
+    <span>O QUE FAZEMOS</span>
+    <h2>Serviços</h2>
+  </div>
+
+  <div class="service-grid">
+
+    <article>
+      <i>01</i>
+      <h3>Gestão de máquinas</h3>
+      <p>Controle organizado dos equipamentos e registros.</p>
+    </article>
+
+    <article>
+      <i>02</i>
+      <h3>Controle de frota</h3>
+      <p>Acompanhamento de quantidade e situação das máquinas.</p>
+    </article>
+
+    <article>
+      <i>03</i>
+      <h3>Disponibilidade</h3>
+      <p>Visualização rápida dos equipamentos disponíveis e em operação.</p>
+    </article>
+
+    <article>
+      <i>04</i>
+      <h3>Organização operacional</h3>
+      <p>Informações centralizadas para apoiar decisões.</p>
+    </article>
+
+  </div>
+
+</section>
+
+
+<section class="panel" id="frota">
+
+  <div class="section-heading">
+
+    <span>CONTROLE DA FROTA</span>
+
+    <h2>Nossa Frota</h2>
+
+    <p>
+      Consulte os equipamentos cadastrados e acompanhe o status de cada máquina.
+    </p>
+
+  </div>
+
+
+  <div class="panel-head">
+
+    <div>
+      <p class="fleet-updated">
+        Dados atualizados pelo administrador.
+      </p>
+    </div>
+
+    <input
+      id="busca"
+      class="search"
+      placeholder="Buscar registro ou categoria..."
+      oninput="renderFrota()"
+    >
+
+  </div>
+
+
+  <div class="table-wrap">
+
+    <table>
+
+      <thead>
+
+        <tr>
+          <th>Registro</th>
+          <th>Categoria de máquina</th>
+          <th>Quantidade</th>
+          <th>Status</th>
+          <th>Atualizado em</th>
+        </tr>
+
+      </thead>
+
+      <tbody id="tabelaFrota"></tbody>
+
+    </table>
+
+  </div>
+
+</section>
+
+
+<section class="panel fale-conosco" id="fale-conosco">
+
+  <div class="contact-content">
+
+    <div>
+
+      <span class="eyebrow dark">
+        FALE CONOSCO
+      </span>
+
+      <h2>
+        Entre em contato com a MáquinaPro
+      </h2>
+
+      <p>
+        Precisa de informações sobre máquinas, disponibilidade, alocação
+        ou nossos serviços? Fale diretamente com nossa equipe pelo WhatsApp.
+      </p>
+
+
+      <!-- BOTÃO DO WHATSAPP -->
+
+      <a
+        id="whatsappLink"
+        class="whatsapp-button"
+        href="#"
+        target="_blank"
+        rel="noopener"
+      >
+
+        <span class="whatsapp-icon">
+          ☎
+        </span>
+
+        Falar pelo WhatsApp
+
+      </a>
+
+    </div>
+
+
+    <div class="contact-card">
+
+      <strong>
+        Atendimento
+      </strong>
+
+      <p>
+        Estamos prontos para atender você e tirar suas dúvidas.
+      </p>
+
+      <span>
+        Resposta rápida pelo WhatsApp
+      </span>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<footer class="site-footer">
+
+  <div class="footer-brand">
+
+    <img
+      src="assets/logo-maquinapro.png"
+      alt="MáquinaPro"
+    >
+
+    <small>
+      Gestão de máquinas pesadas
+    </small>
+
+  </div>
+
+
+  <p>
+    © 2026 MáquinaPro. Todos os direitos reservados.
+  </p>
+
+
+  <div class="footer-social">
+
+    <span>◎</span>
+    <span>f</span>
+    <span>◔</span>
+
+  </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,561 @@
+
+:root{
+ --navy:#061a43;--navy2:#08285d;--blue:#0877f9;--blue2:#1765c2;--white:#fff;
+ --ink:#111c36;--muted:#65738a;--line:#e5ebf3;--bg:#f7f9fc;--green:#14c86b;
+ --shadow:0 16px 45px rgba(12,37,76,.10);--radius:16px
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;line-height:1.5}
+a{text-decoration:none}.site-header{height:86px;position:sticky;top:0;z-index:100;background:rgba(5,25,65,.96);backdrop-filter:blur(15px);display:flex;align-items:center;padding:0 max(5%,40px);gap:28px;box-shadow:0 5px 25px rgba(0,15,45,.16)}
+.brand{width:300px;display:flex;align-items:center}.brand img{width:280px;max-height:62px;object-fit:contain;object-position:left center}
+.main-nav{display:flex;align-items:center;gap:8px;margin-left:auto}.main-nav a{color:#e9f1ff;padding:10px 14px;border-radius:8px;font-size:14px;font-weight:700;position:relative}.main-nav a:hover,.main-nav a.active{color:#fff}.main-nav a.active:after{content:"";position:absolute;height:2px;left:12px;right:12px;bottom:3px;background:#1684ff;border-radius:2px}
+.admin-button{border:1px solid rgba(255,255,255,.28);color:#fff;padding:11px 16px;border-radius:9px;font-size:13px;font-weight:700;white-space:nowrap;transition:.2s}.admin-button:hover{background:#fff;color:var(--navy)}
+.menu-toggle{display:none;background:none;border:0;color:#fff;font-size:24px}
+.hero-modern{min-height:470px;position:relative;overflow:hidden;background:linear-gradient(90deg,#03183e 0%,#062453 46%,#142d50 100%),url("assets/maquina-pesada-hero.jpg") center/cover no-repeat}.hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,19,48,.98) 0%,rgba(4,29,69,.86) 42%,rgba(4,25,53,.28) 78%,rgba(4,25,53,.15));}.hero-content{position:relative;z-index:2;max-width:1280px;margin:auto;padding:76px 6% 95px}.hero-copy{max-width:640px}.eyebrow,.section-heading>span{font-size:10px;font-weight:900;letter-spacing:1.7px;color:#4a9dff}.hero-copy h1{font-size:clamp(39px,4.8vw,58px);line-height:1.05;letter-spacing:-2px;color:#fff;margin:10px 0 17px}.hero-copy h1 strong{color:#1684ff}.hero-copy p{color:#edf4ff;font-size:18px;max-width:520px;margin:0 0 26px}.hero-actions{display:flex;gap:15px}.btn-primary,.btn-outline{padding:13px 20px;border-radius:8px;font-weight:800;font-size:14px;transition:.2s}.btn-primary{background:#0877f9;color:#fff;box-shadow:0 10px 25px rgba(8,119,249,.28)}.btn-primary:hover{transform:translateY(-2px);background:#1684ff}.btn-primary span,.btn-outline span{margin-left:14px}.btn-outline{border:1px solid #dce7f7;color:#fff}.btn-outline:hover{background:#fff;color:var(--navy)}
+.benefits{position:relative;z-index:5;max-width:1180px;margin:-32px auto 36px;background:#fff;border-radius:14px;box-shadow:0 12px 35px rgba(20,48,88,.14);display:grid;grid-template-columns:repeat(4,1fr);border:1px solid #e8edf4}.benefit{padding:20px 24px;display:flex;align-items:center;gap:14px;border-right:1px solid #e9eef5}.benefit:last-child{border-right:0}.benefit-icon{width:45px;height:45px;flex:none;border-radius:11px;display:grid;place-items:center;background:linear-gradient(145deg,#0b3b82,#1765c2);color:#fff;font-size:22px;box-shadow:0 7px 18px #0b3b8230}.benefit strong{display:block;font-size:14px;line-height:1.25}.benefit small{display:block;color:#68778d;font-size:11px;margin-top:4px}
+.section-block{max-width:1180px;margin:0 auto;padding:38px 0}.section-heading{margin-bottom:22px}.section-heading h2{font-size:31px;letter-spacing:-1px;margin:5px 0 0}.section-heading h2:after{content:"";display:block;width:43px;height:3px;background:#0877f9;margin-top:8px;border-radius:4px}
+.about-modern{padding-top:24px}.about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:55px;background:#fff;border:1px solid var(--line);border-radius:15px;padding:35px;box-shadow:0 8px 30px rgba(20,48,88,.06)}.about-grid h3{font-size:25px;line-height:1.25;margin:0 0 14px}.about-grid p{color:var(--muted);font-size:14px;line-height:1.75}.about-points{display:grid;gap:12px}.about-points div{padding:15px 17px;background:#f5f8fd;border-radius:10px;border-left:3px solid #0877f9}.about-points b{display:block;font-size:13px}.about-points span{color:var(--muted);font-size:12px}
+.services{padding-top:15px}.service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.service-grid article{background:#fff;border:1px solid var(--line);border-radius:13px;padding:23px;box-shadow:0 7px 22px rgba(20,48,88,.05);transition:.2s}.service-grid article:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#cddcf0}.service-grid i{font-style:normal;color:#0877f9;font-size:11px;font-weight:900}.service-grid h3{font-size:16px;margin:12px 0 7px}.service-grid p{color:var(--muted);font-size:12px;margin:0}
+#frota{max-width:1180px;margin:0 auto;padding:35px 0}.frota-modern,.frota-section,.fleet-section{background:transparent}
+#frota .panel,#frota.panel{margin:0;padding:0;background:transparent;border:0;box-shadow:none;border-radius:0}
+#frota .section-heading{margin-bottom:18px}
+.table-wrap{background:#fff;border:1px solid var(--line);border-radius:13px;overflow:auto;box-shadow:0 7px 25px rgba(20,48,88,.05)}
+table{width:100%;border-collapse:collapse;min-width:700px}th{background:#f7f9fc;color:#7a8798;text-align:left;font-size:10px;text-transform:uppercase;letter-spacing:.6px;padding:14px}td{padding:14px;border-top:1px solid #edf1f5;font-size:12px}tbody tr:hover{background:#f8fbff}
+.contact-section,.fale-conosco{max-width:1180px;margin:18px auto 45px;padding:30px 38px;border-radius:15px;background:radial-gradient(circle at 10% 30%,rgba(27,116,255,.2),transparent 25%),linear-gradient(110deg,#061b49,#062e70);color:#fff;display:flex;align-items:center;justify-content:space-between;gap:30px;box-shadow:0 15px 35px rgba(5,32,80,.16)}.contact-section h2,.fale-conosco h2{font-size:25px;margin:4px 0 7px}.contact-section p,.fale-conosco p{color:#d5e4fb;font-size:13px;margin:0;max-width:620px}.whatsapp-button{background:#10c768;color:#fff;border-radius:8px;padding:13px 22px;font-weight:900;white-space:nowrap;box-shadow:0 9px 22px rgba(16,199,104,.24);transition:.2s}.whatsapp-button:hover{transform:translateY(-2px);background:#18d875}
+.site-footer{background:#061b49;color:#fff;min-height:90px;padding:18px max(6%,50px);display:flex;align-items:center;justify-content:space-between;gap:25px}.footer-brand img{width:180px;display:block;max-height:42px;object-fit:contain;object-position:left center}.footer-brand small{display:none}.site-footer p{font-size:11px;color:#c7d6ee;margin:0}.footer-social{display:flex;gap:13px}.footer-social span{width:28px;height:28px;border:1px solid #ffffff44;border-radius:50%;display:grid;place-items:center;color:#fff}
+@media(max-width:1050px){.site-header{padding:0 4%;gap:15px}.brand{width:230px}.brand img{width:220px}.main-nav a{padding:8px;font-size:12px}.admin-button{font-size:11px}.benefits,.section-block,#frota,.contact-section,.fale-conosco{margin-left:4%;margin-right:4%}.service-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:780px){.main-nav{display:none}.menu-toggle{display:block}.site-header{justify-content:space-between}.brand{margin-right:auto}.benefits{grid-template-columns:1fr 1fr}.benefit:nth-child(2){border-right:0}.benefit:nth-child(-n+2){border-bottom:1px solid #e9eef5}.about-grid{grid-template-columns:1fr}.contact-section,.fale-conosco{flex-direction:column;align-items:flex-start}.hero-modern{min-height:500px}.hero-content{padding:65px 6% 95px}.hero-copy p{font-size:16px}}
+@media(max-width:520px){.brand{width:185px}.brand img{width:180px}.admin-button{display:none}.benefits{grid-template-columns:1fr;margin-top:-25px}.benefit{border-right:0!important;border-bottom:1px solid #e9eef5}.benefit:last-child{border-bottom:0}.service-grid{grid-template-columns:1fr}.about-grid{padding:22px}.hero-copy h1{font-size:38px}.hero-actions{flex-direction:column;align-items:flex-start}.site-footer{flex-direction:column;align-items:flex-start}.footer-social{align-self:flex-end}}
+
+.main-nav.mobile-open{display:flex;position:absolute;top:86px;left:0;right:0;padding:12px 5%;background:#061a43;flex-direction:column;align-items:stretch;box-shadow:0 15px 25px rgba(0,0,0,.18)}.main-nav.mobile-open a{padding:12px}
+
+/* CORREÇÃO FINAL - Fale Conosco único e Frota sem caixa duplicada */
+#frota{background:transparent!important;border:0!important;box-shadow:none!important}
+#frota .panel,#frota.panel{background:transparent!important;border:0!important;box-shadow:none!important}
+.contact-section.fale-conosco,#fale-conosco{display:flex!important}
+
+/* =========================================================
+   FALE CONOSCO — COMPONENTE FINAL
+   Isolado da Frota para evitar conflitos de CSS
+   ========================================================= */
+section#fale-conosco.fale-conosco{
+  width:calc(100% - 10%);
+  max-width:1180px;
+  margin:28px auto 48px;
+  padding:0;
+  display:block;
+  background:transparent;
+  border:0;
+  box-shadow:none;
+  color:inherit;
+}
+#fale-conosco .contact-content{
+  width:100%;
+  min-height:210px;
+  padding:34px 38px;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 290px;
+  align-items:center;
+  gap:36px;
+  border-radius:18px;
+  overflow:hidden;
+  position:relative;
+  background:
+    radial-gradient(circle at 92% 12%,rgba(30,129,255,.30),transparent 24%),
+    radial-gradient(circle at 10% 100%,rgba(20,91,190,.25),transparent 32%),
+    linear-gradient(115deg,#041940 0%,#062c68 58%,#083d86 100%);
+  box-shadow:0 18px 42px rgba(4,31,76,.18);
+}
+#fale-conosco .contact-content:after{
+  content:"";
+  position:absolute;
+  width:180px;
+  height:180px;
+  right:-70px;
+  bottom:-100px;
+  border:35px solid rgba(30,129,255,.22);
+  border-radius:50%;
+  pointer-events:none;
+}
+#fale-conosco .contact-content>div:first-child{
+  position:relative;
+  z-index:2;
+}
+#fale-conosco .eyebrow.dark{
+  color:#55a6ff;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:1.8px;
+}
+#fale-conosco h2{
+  margin:7px 0 10px;
+  color:#fff;
+  font-size:27px;
+  line-height:1.15;
+  letter-spacing:-.7px;
+}
+#fale-conosco p{
+  margin:0;
+  max-width:650px;
+  color:#d5e4fb;
+  font-size:13px;
+  line-height:1.65;
+}
+#fale-conosco .whatsapp-button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  margin-top:18px;
+  padding:12px 19px;
+  border-radius:9px;
+  background:#16c96b;
+  color:#fff;
+  font-size:12px;
+  font-weight:900;
+  box-shadow:0 9px 22px rgba(22,201,107,.22);
+  transition:transform .2s ease,background .2s ease,box-shadow .2s ease;
+}
+#fale-conosco .whatsapp-button:hover{
+  transform:translateY(-2px);
+  background:#19d875;
+  box-shadow:0 12px 26px rgba(22,201,107,.30);
+}
+#fale-conosco .whatsapp-icon{
+  width:25px;
+  height:25px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:#fff;
+  color:#16b960;
+  font-size:13px;
+}
+#fale-conosco .contact-card{
+  position:relative;
+  z-index:2;
+  padding:23px;
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:14px;
+  background:rgba(255,255,255,.08);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.08);
+  backdrop-filter:blur(8px);
+}
+#fale-conosco .contact-card strong{
+  display:block;
+  color:#fff;
+  font-size:16px;
+}
+#fale-conosco .contact-card p{
+  margin:8px 0;
+  color:#d9e7fa;
+  font-size:12px;
+}
+#fale-conosco .contact-card span{
+  color:#8fc0ff;
+  font-size:10px;
+  font-weight:800;
+}
+@media(max-width:780px){
+  section#fale-conosco.fale-conosco{
+    width:calc(100% - 8%);
+    margin-left:4%;
+    margin-right:4%;
+  }
+  #fale-conosco .contact-content{
+    grid-template-columns:1fr;
+    padding:28px;
+    gap:22px;
+  }
+  #fale-conosco .contact-card{
+    width:100%;
+  }
+}
+@media(max-width:480px){
+  #fale-conosco .contact-content{
+    padding:24px 20px;
+    border-radius:14px;
+  }
+  #fale-conosco h2{
+    font-size:23px;
+  }
+}
+
+/* =========================================================
+   ÁREA FROTA — VISUAL MODERNO
+   ========================================================= */
+#frota,
+section#frota{
+  width:calc(100% - 10%);
+  max-width:1180px;
+  margin:0 auto;
+  padding:42px 0 35px;
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+}
+#frota .section-heading{
+  margin-bottom:20px;
+}
+#frota .section-heading h2{
+  margin-bottom:7px;
+}
+#frota .section-heading p{
+  margin:8px 0 0;
+  color:#718096;
+  font-size:13px;
+  max-width:650px;
+}
+
+/* Remove aparência de "caixa dentro de caixa" */
+#frota .panel,
+#frota .card,
+#frota .fleet-card,
+#frota .fleet-container{
+  background:transparent;
+  border:0;
+  box-shadow:none;
+}
+
+/* Tabelas */
+#frota .table-wrap,
+#frota .table-responsive,
+#frota .table-container{
+  width:100%;
+  overflow-x:auto;
+  background:#fff;
+  border:1px solid #e3eaf3;
+  border-radius:15px;
+  box-shadow:0 10px 30px rgba(13,42,80,.07);
+}
+#frota table{
+  width:100%;
+  min-width:680px;
+  border-collapse:separate;
+  border-spacing:0;
+  background:#fff;
+}
+#frota thead th{
+  background:#071e49;
+  color:#dbe9fb;
+  padding:15px 17px;
+  border:0;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.7px;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+#frota thead th:first-child{border-radius:14px 0 0 0}
+#frota thead th:last-child{border-radius:0 14px 0 0}
+#frota tbody td{
+  padding:15px 17px;
+  color:#26364f;
+  border-top:1px solid #edf1f6;
+  font-size:12px;
+  vertical-align:middle;
+}
+#frota tbody tr{
+  transition:background .18s ease,transform .18s ease;
+}
+#frota tbody tr:hover{
+  background:#f6faff;
+}
+
+/* Registro da máquina */
+#frota td:first-child{
+  color:#075fca;
+  font-weight:900;
+  letter-spacing:.2px;
+}
+
+/* Status */
+#frota .status,
+#frota .badge,
+#frota .status-badge{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:92px;
+  padding:6px 10px;
+  border-radius:999px;
+  font-size:10px;
+  font-weight:900;
+  line-height:1;
+}
+#frota .status.disponivel,
+#frota .badge.disponivel,
+#frota .status-badge.disponivel{
+  color:#08733d;
+  background:#e5f8ee;
+}
+#frota .status.operacao,
+#frota .status.em-operacao,
+#frota .badge.operacao,
+#frota .badge.em-operacao{
+  color:#075bbd;
+  background:#e5f1ff;
+}
+#frota .status.manutencao,
+#frota .status.em-manutencao,
+#frota .badge.manutencao,
+#frota .badge.em-manutencao{
+  color:#a15d00;
+  background:#fff3d9;
+}
+#frota .status.indisponivel,
+#frota .badge.indisponivel{
+  color:#a52525;
+  background:#fde8e8;
+}
+
+/* Formulários e filtros da frota */
+#frota form{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:12px;
+  padding:18px;
+  margin-bottom:16px;
+  background:#fff;
+  border:1px solid #e3eaf3;
+  border-radius:15px;
+  box-shadow:0 8px 25px rgba(13,42,80,.06);
+}
+#frota input,
+#frota select{
+  width:100%;
+  height:42px;
+  border:1px solid #d9e2ee;
+  border-radius:9px;
+  background:#fbfcfe;
+  color:#26364f;
+  padding:0 12px;
+  outline:none;
+  font-size:12px;
+  transition:border-color .2s,box-shadow .2s,background .2s;
+}
+#frota input:focus,
+#frota select:focus{
+  border-color:#1684ff;
+  background:#fff;
+  box-shadow:0 0 0 3px rgba(22,132,255,.10);
+}
+#frota button,
+#frota .btn{
+  min-height:42px;
+  border:0;
+  border-radius:9px;
+  padding:0 16px;
+  background:#0877f9;
+  color:#fff;
+  font-weight:800;
+  font-size:12px;
+  cursor:pointer;
+  box-shadow:0 7px 17px rgba(8,119,249,.18);
+  transition:transform .18s,background .18s;
+}
+#frota button:hover,
+#frota .btn:hover{
+  background:#176fd3;
+  transform:translateY(-1px);
+}
+
+/* Cartões de máquinas, caso a área use cards em vez de tabela */
+#frota .machine-card,
+#frota .machine-item{
+  background:#fff;
+  border:1px solid #e3eaf3;
+  border-radius:14px;
+  padding:18px;
+  box-shadow:0 8px 25px rgba(13,42,80,.06);
+  transition:.2s;
+}
+#frota .machine-card:hover,
+#frota .machine-item:hover{
+  transform:translateY(-3px);
+  box-shadow:0 14px 32px rgba(13,42,80,.10);
+  border-color:#cdddf0;
+}
+
+/* Estado vazio */
+#frota .fleet-empty,
+#frota .empty-state{
+  padding:35px;
+  background:#fff;
+  border:1px dashed #cfdbea;
+  border-radius:15px;
+  text-align:center;
+  color:#718096;
+  font-size:13px;
+}
+
+/* Mobile */
+@media(max-width:780px){
+  #frota,
+  section#frota{
+    width:calc(100% - 8%);
+    margin-left:4%;
+    margin-right:4%;
+    padding-top:32px;
+  }
+  #frota form{
+    grid-template-columns:1fr 1fr;
+  }
+}
+@media(max-width:520px){
+  #frota form{
+    grid-template-columns:1fr;
+  }
+  #frota .table-wrap,
+  #frota .table-responsive,
+  #frota .table-container{
+    border-radius:12px;
+  }
+}
+
+/* =========================================================
+   CORREÇÃO FINAL — FROTA CENTRALIZADA
+   ========================================================= */
+body{
+  overflow-x:hidden;
+}
+main{
+  width:100%;
+}
+section#frota.panel{
+  display:block!important;
+  width:min(1180px, calc(100% - 40px))!important;
+  max-width:1180px!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+  margin-top:0!important;
+  margin-bottom:35px!important;
+  padding:42px 0 35px!important;
+  position:relative!important;
+  left:auto!important;
+  right:auto!important;
+  transform:none!important;
+}
+section#frota.panel .section-heading,
+section#frota.panel .panel-head,
+section#frota.panel .table-wrap{
+  width:100%!important;
+  max-width:100%!important;
+  margin-left:0!important;
+  margin-right:0!important;
+}
+section#frota.panel .panel-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+section#frota.panel .table-wrap{
+  overflow-x:auto;
+}
+section#frota.panel .section-heading h2{
+  margin-top:5px;
+}
+section#frota.panel .section-heading p{
+  margin-top:7px;
+}
+@media(max-width:780px){
+  section#frota.panel{
+    width:calc(100% - 32px)!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+    padding-top:30px!important;
+  }
+  section#frota.panel .panel-head{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+  section#frota.panel .search{
+    width:100%;
+  }
+}
+@media(max-width:480px){
+  section#frota.panel{
+    width:calc(100% - 24px)!important;
+  }
+}
+
+/* =========================================================
+   STATUS DA FROTA — CORES DINÂMICAS
+   A cor acompanha o status atual da máquina.
+   ========================================================= */
+#frota .fleet-status,
+#frota .status-badge,
+#frota .status,
+#frota .badge{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:6px!important;
+  min-width:105px;
+  padding:7px 11px!important;
+  border-radius:999px!important;
+  font-size:10px!important;
+  line-height:1!important;
+  font-weight:900!important;
+  white-space:nowrap;
+  border:1px solid transparent;
+}
+#frota .fleet-status::before,
+#frota .status-badge::before,
+#frota .status::before,
+#frota .badge::before{
+  content:"";
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:currentColor;
+  flex:none;
+}
+/* Disponível */
+#frota .status-disponivel,
+#frota .status-available,
+#frota .status[data-status="disponivel"],
+#frota .status[data-status="available"]{
+  color:#08783f!important;
+  background:#e7f8ef!important;
+  border-color:#c7edd9!important;
+}
+/* Em operação / Alugada */
+#frota .status-operacao,
+#frota .status-em-operacao,
+#frota .status-alugada,
+#frota .status-busy,
+#frota .status[data-status="em operação"],
+#frota .status[data-status="em_operacao"],
+#frota .status[data-status="alugada"]{
+  color:#075dbb!important;
+  background:#e7f1ff!important;
+  border-color:#c9def8!important;
+}
+/* Em manutenção */
+#frota .status-manutencao,
+#frota .status-em-manutencao,
+#frota .status-maintenance,
+#frota .status[data-status="manutenção"],
+#frota .status[data-status="em manutenção"]{
+  color:#a25d00!important;
+  background:#fff3d9!important;
+  border-color:#f5dfaa!important;
+}
+/* Reservada */
+#frota .status-reservada,
+#frota .status-reserved,
+#frota .status[data-status="reservada"]{
+  color:#6846b5!important;
+  background:#f0eaff!important;
+  border-color:#ddd0fb!important;
+}
+/* Indisponível */
+#frota .status-indisponivel,
+#frota .status-inactive,
+#frota .status[data-status="indisponivel"],
+#frota .status[data-status="indisponível"]{
+  color:#a52525!important;
+  background:#fde9e9!important;
+  border-color:#f4caca!important;
+}

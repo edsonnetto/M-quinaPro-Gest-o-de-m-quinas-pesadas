@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Login do administrador | MáquinaPro</title><link rel="stylesheet" href="admin.css"></head>
+<body class="login-page">
+<div class="login-card">
+  <div class="brand"><span class="brand-mark">MP</span><div><strong>MáquinaPro</strong><small>Área administrativa</small></div></div>
+  <h1>Login do administrador</h1><p>Esta área é separada do site principal.</p>
+  <form id="loginForm">
+    <label>Usuário<input id="loginUser" required autocomplete="username"></label>
+    <label>Senha<input id="loginPass" type="password" required autocomplete="current-password"></label>
+    <button class="primary full" type="submit">Entrar</button>
+    <div id="loginError" class="error"></div>
+  </form>
+  <a class="back" href="../index.html">← Voltar ao site principal</a>
+</div>
+<script src="admin.js"></script>
+</body></html>
